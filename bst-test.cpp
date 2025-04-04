@@ -8,6 +8,37 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+
+    AVLTree<int, double> bst;
+	bst.insert(std::make_pair(43, 1.0));
+	bst.insert(std::make_pair(-109, 1.0));
+	bst.insert(std::make_pair(107, 1.0));
+	bst.insert(std::make_pair(-140, 1.0));
+	bst.insert(std::make_pair(14, 1.0));
+    bst.insert(std::make_pair(51, 1.0));
+	bst.insert(std::make_pair(122, 1.0));
+	bst.insert(std::make_pair(16, 1.0));
+	bst.insert(std::make_pair(48, 1.0));
+	bst.insert(std::make_pair(86, 1.0));
+	bst.insert(std::make_pair(135, 1.0));
+	bst.insert(std::make_pair(83, 1.0));
+	bst.insert(std::make_pair(88, 1.0));
+
+    bst.showBalanceOfAll();
+
+    bst.print();
+    bst.remove(-140);
+
+    std::cout << "here balance is fucked: " << std::endl;
+    bst.print();
+    /*
+	bst.remove(-109);
+    std::cout << "Before any removals, tree is: " << std::endl;
+    bst.print();
+	bst.remove(48);
+	bst.print();*/
+
+    /*
     // Binary Search Tree tests
     BinarySearchTree<char,int> bt;
     bt.insert(std::make_pair('a',1));
@@ -43,6 +74,6 @@ int main(int argc, char *argv[])
     }
     cout << "Erasing b" << endl;
     at.remove('b');
-
+    */
     return 0;
 }
