@@ -5,7 +5,7 @@
 
 #include "equal-paths.h"
 
-#include <algorithm>
+//#include <algorithm>
 using namespace std;
 
 
@@ -18,7 +18,9 @@ int getHeight(Node* root) {
     int leftH = getHeight(root->left);
     int rightH = getHeight(root->right);
 
-    return std::max(leftH, rightH) + 1;
+    if (leftH > rightH) return leftH + 1;
+    else return rightH + 1;
+    //return std::max(leftH, rightH) + 1;
 }
 
 bool equalPaths(Node * root)
